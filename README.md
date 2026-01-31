@@ -31,6 +31,14 @@ $$
 
 This structure explicitly models the heterogeneity between doctors ($\sigma_{pop}$) while enforcing a shared statistical backbone.
 
+
+## 📊 Key Result: Hierarchical Shrinkage
+This plot demonstrates the core value of the Bayesian approach. 
+- **Dr. B (Bottom Right):** Despite a raw success rate of 100% (Red X), the model "shrinks" the estimate to ~83% (Blue Circle), correcting for their small sample size ($N=4$).
+- **Dr. D (Left):** A doctor with 0% observed success is corrected toward the population mean, preventing the model from assigning a 0% probability to future success based on limited data.
+- **Dr. G (Center):** A doctor with high sample volume shows almost no shrinkage, demonstrating that the model correctly trusts the data when evidence is strong.
+
+
 ## 📂 Project Structure
 ```text
 /Hierarchical-Doctor-Model
@@ -41,8 +49,5 @@ This structure explicitly models the heterogeneity between doctors ($\sigma_{pop
 │   └── forest_plot.png               # Posterior credible intervals for all doctors
 └── README.md
 
-### 📊 Key Result: Hierarchical Shrinkage
-This plot demonstrates the core value of the Bayesian approach. 
-- **Dr. B (Bottom Right):** Despite a raw success rate of 100% (Red X), the model "shrinks" the estimate to ~83% (Blue Circle), correcting for their small sample size ($N=4$).
-- **Dr. D (Left):** A doctor with 0% observed success is corrected toward the population mean, preventing the model from assigning a 0% probability to future success based on limited data.
-- **Dr. G (Center):** A doctor with high sample volume shows almost no shrinkage, demonstrating that the model correctly trusts the data when evidence is strong.
+
+
